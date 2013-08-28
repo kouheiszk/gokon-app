@@ -1,0 +1,9 @@
+# cocoapods
+/Pods
+/Podfile.lock
+
+# xcworkspacedata
+contents.xcworkspacedata
+
+# xcuserdata
+xcuserdata
