@@ -7,6 +7,13 @@
 //
 
 #import "GokonAppDelegate.h"
+#import "WelcomeViewController.h"
+
+@interface GokonAppDelegate()
+
+@property (strong, nonatomic) WelcomeViewController* viewController;
+
+@end
 
 @implementation GokonAppDelegate
 
@@ -14,7 +21,12 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    
+    self.viewController = [[WelcomeViewController alloc] initWithNibName:@"WelcomeViewController" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:_viewController];
+    self.window.rootViewController = navigationController;
+
     [self.window makeKeyAndVisible];
     return YES;
 }
