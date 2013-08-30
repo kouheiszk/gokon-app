@@ -1,21 +1,22 @@
 //
-//  EnquateInvitationViewController.m
+//  GokonWebViewController.m
 //  gokon
 //
-//  Created by Suzuki Kouhei on 2013/08/28.
+//  Created by Suzuki Kouhei on 2013/08/30.
 //  Copyright (c) 2013年 鈴木 康平. All rights reserved.
 //
 
-#import "EnquateInvitationViewController.h"
 #import "GokonWebViewController.h"
 
-@interface EnquateInvitationViewController ()
+@interface GokonWebViewController ()
+
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
-@implementation EnquateInvitationViewController
+@implementation GokonWebViewController
 
-@synthesize answerEnquateURL;
+@synthesize url;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +31,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+    [_webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,18 +42,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)createQRCodeTapped:(id)sender {
+- (IBAction)createQRCodePressed:(id)sender {
     QRCodeModalViewController *qrCodeModalViewController = [[QRCodeModalViewController alloc] init];
     qrCodeModalViewController.delegate = self;
-    qrCodeModalViewController.qrCodeValue = self.answerEnquateURL;
+    qrCodeModalViewController.qrCodeValue = url;
     [self presentViewController:qrCodeModalViewController animated:YES completion:nil];
-}
-
-- (IBAction)answerEnquatePressed:(id)sender {
-    GokonWebViewController *gokonWevViewController = [[GokonWebViewController alloc] init];
-    gokonWevViewController.url = answerEnquateURL;
-
-    [self.navigationController pushViewController:gokonWevViewController animated:YES];
 }
 
 #pragma mark - QRCodeModalViewController delegate

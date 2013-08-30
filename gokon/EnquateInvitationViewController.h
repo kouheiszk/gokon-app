@@ -11,6 +11,6 @@
 
 @interface EnquateInvitationViewController : UIViewController <QRCodeModalViewControllerDelegate>
 
-@property (copy, nonatomic) NSString *qrCodeValue;
+@property (copy, nonatomic) NSString *answerEnquateURL;
 
 @end

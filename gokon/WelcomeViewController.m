@@ -9,7 +9,7 @@
 #import "WelcomeViewController.h"
 
 // Enquate
-#import "EnquateSelectNumberViewController.h"
+#import "GokonWebViewController.h"
 
 @interface WelcomeViewController ()
 
@@ -41,7 +41,12 @@
 #pragma mark - xib callback
 
 - (IBAction)startEnqueteTapped:(id)sender {
-    [self.navigationController pushViewController:[[EnquateSelectNumberViewController alloc] init] animated:YES];
+    // [self.navigationController pushViewController:[[EnquateSelectNumberViewController alloc] init] animated:YES];
+
+    NSString *url = @"http://gokon-apps.herokuapp.com";
+    GokonWebViewController *gokonWevViewController = [[GokonWebViewController alloc] init];
+    gokonWevViewController.url = url;
+    [self.navigationController pushViewController:gokonWevViewController animated:YES];
 }
 
 @end

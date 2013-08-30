@@ -16,6 +16,8 @@
 		48FAA28517CE130500C8261E /* EnquateInvitationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FAA28317CE130400C8261E /* EnquateInvitationViewController.xib */; };
 		48FAA28A17CE15F100C8261E /* QRCodeModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FAA28817CE15F100C8261E /* QRCodeModalViewController.m */; };
 		48FAA28B17CE15F100C8261E /* QRCodeModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FAA28917CE15F100C8261E /* QRCodeModalViewController.xib */; };
+		48FAA29017D0906200C8261E /* GokonWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48FAA28E17D0906200C8261E /* GokonWebViewController.m */; };
+		48FAA29117D0906200C8261E /* GokonWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FAA28F17D0906200C8261E /* GokonWebViewController.xib */; };
 		F8B023B217CD918700DB4991 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B023B117CD918700DB4991 /* UIKit.framework */; };
 		F8B023B417CD918700DB4991 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B023B317CD918700DB4991 /* Foundation.framework */; };
 		F8B023B617CD918700DB4991 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B023B517CD918700DB4991 /* CoreGraphics.framework */; };
@@ -40,6 +42,9 @@
 		48FAA28717CE15F100C8261E /* QRCodeModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeModalViewController.h; sourceTree = "<group>"; };
 		48FAA28817CE15F100C8261E /* QRCodeModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeModalViewController.m; sourceTree = "<group>"; };
 		48FAA28917CE15F100C8261E /* QRCodeModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeModalViewController.xib; sourceTree = "<group>"; };
+		48FAA28D17D0906200C8261E /* GokonWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GokonWebViewController.h; sourceTree = "<group>"; };
+		48FAA28E17D0906200C8261E /* GokonWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GokonWebViewController.m; sourceTree = "<group>"; };
+		48FAA28F17D0906200C8261E /* GokonWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GokonWebViewController.xib; sourceTree = "<group>"; };
 		DA019B9E2DC04B5BAB0DB296 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC3F134B441F47C8BEBA41EB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F8B023AE17CD918700DB4991 /* gokon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gokon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +89,7 @@
 		48FAA27417CE062500C8261E /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				48FAA28C17D0904700C8261E /* WebView */,
 				48FAA28617CE14E300C8261E /* QRCode */,
 				48FAA27A17CE096200C8261E /* Enquate */,
 				48FAA27517CE065800C8261E /* WelcomeViewController.h */,
@@ -114,6 +120,16 @@
 				48FAA28917CE15F100C8261E /* QRCodeModalViewController.xib */,
 			);
 			name = QRCode;
+			sourceTree = "<group>";
+		};
+		48FAA28C17D0904700C8261E /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				48FAA28D17D0906200C8261E /* GokonWebViewController.h */,
+				48FAA28E17D0906200C8261E /* GokonWebViewController.m */,
+				48FAA28F17D0906200C8261E /* GokonWebViewController.xib */,
+			);
+			name = WebView;
 			sourceTree = "<group>";
 		};
 		F8B023A517CD918700DB4991 = {
@@ -231,6 +247,7 @@
 				48FAA27F17CE0ACF00C8261E /* EnquateSelectNumberViewController.xib in Resources */,
 				48FAA28517CE130500C8261E /* EnquateInvitationViewController.xib in Resources */,
 				48FAA28B17CE15F100C8261E /* QRCodeModalViewController.xib in Resources */,
+				48FAA29117D0906200C8261E /* GokonWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +297,7 @@
 				48FAA27E17CE0ACF00C8261E /* EnquateSelectNumberViewController.m in Sources */,
 				48FAA28417CE130500C8261E /* EnquateInvitationViewController.m in Sources */,
 				48FAA28A17CE15F100C8261E /* QRCodeModalViewController.m in Sources */,
+				48FAA29017D0906200C8261E /* GokonWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

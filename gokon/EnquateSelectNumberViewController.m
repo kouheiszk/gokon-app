@@ -83,7 +83,7 @@
     NSString *enquateUrl = [NSString stringWithFormat:@"http://gokon-apps.herokuapp.com/answerQuestions?survey_id=%@", receivedDictionary[@"survey_id"]];
     
     EnquateInvitationViewController *enquateInvitationViewController = [[EnquateInvitationViewController alloc] init];
-    enquateInvitationViewController.qrCodeValue = enquateUrl;
+    enquateInvitationViewController.answerEnquateURL = enquateUrl;
     
     [self.navigationController pushViewController:enquateInvitationViewController animated:YES];
 }
